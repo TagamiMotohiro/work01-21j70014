@@ -18,8 +18,9 @@ namespace Tagami
         {
             get;private set; 
         }=new Vector2();
-        private void Input_Pos(int input)
+        private int Input_Pos()
         {
+            int input=0;
             bool parcesuccess = false;
             while (!parcesuccess)
             {
@@ -30,13 +31,14 @@ namespace Tagami
                     Console.WriteLine("無効な数値が入力されました。");
                 }
             }
+            return input;
         }
         public void XY_Input()
         {
             Console.WriteLine("Xの値を入力してください");
-            Input_Pos(this.pos.x);
+            this.pos.x=Input_Pos();
             Console.WriteLine("Yの値を入力してください");
-            Input_Pos(this.pos.y);
+            this.pos.y=Input_Pos();
         }
     }
 }
