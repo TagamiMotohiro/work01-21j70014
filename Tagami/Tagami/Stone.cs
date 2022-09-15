@@ -26,7 +26,7 @@ namespace Tagami
             {
                 string sx = Console.ReadLine();
                 parcesuccess = int.TryParse(sx, out input);
-                if (!parcesuccess||input>2)
+                if (!parcesuccess||input>Bord.bord_Max_Length)
                 {
                     Console.WriteLine("無効な数値が入力されました。");
                 }
@@ -35,9 +35,9 @@ namespace Tagami
         }
         public void XY_Input()
         {
-            Console.WriteLine("Xの値を入力してください");
+            Console.WriteLine("横の値を入力してください");
             this.pos.x=Input_Pos();
-            Console.WriteLine("Yの値を入力してください");
+            Console.WriteLine("縦の値を入力してください");
             this.pos.y=Input_Pos();
         }
     }
