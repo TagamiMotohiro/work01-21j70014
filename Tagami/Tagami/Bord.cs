@@ -105,7 +105,7 @@ namespace Tagami
                 isWin = true;
                 winMark = input_Mark;
             }
-            winMark = " ";
+            winMark = input_Mark;
             return isWin;
         }
     }
